@@ -7,7 +7,7 @@ part of 'task_comment.dart';
 // **************************************************************************
 
 TaskComment _$TaskCommentFromJson(Map<String, dynamic> json) => TaskComment(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       DateTime.parse(json['time'] as String),
       json['content'] as String,
       json['task'] == null

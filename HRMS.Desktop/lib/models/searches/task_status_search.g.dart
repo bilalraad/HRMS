@@ -8,8 +8,8 @@ part of 'task_status_search.dart';
 
 TaskStatusSearch _$TaskStatusSearchFromJson(Map<String, dynamic> json) =>
     TaskStatusSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?;
 
 Map<String, dynamic> _$TaskStatusSearchToJson(TaskStatusSearch instance) =>

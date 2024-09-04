@@ -135,7 +135,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
       barChartData
           .add(ChartData("${employee.firstName} ${employee.lastName}", count));
     }
-    
+
     if (mounted) {
       setState(() {});
     }
@@ -280,11 +280,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget _buildColumnChart(BuildContext context) {
     return Expanded(
       child: SfCartesianChart(
-        title: ChartTitle(
+        title: const ChartTitle(
           text: "Broj zaposlenika po odjelima",
         ),
-        primaryXAxis: CategoryAxis(),
-        series: <ChartSeries<ChartData, String>>[
+        primaryXAxis: const CategoryAxis(),
+        series: <CartesianSeries<ChartData, String>>[
           ColumnSeries<ChartData, String>(
             dataSource: columnChartData,
             xValueMapper: (ChartData data, _) => data.x,
@@ -315,7 +315,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget _buildRadialChart(BuildContext context) {
     return Expanded(
       child: SfCircularChart(
-        title: ChartTitle(text: 'Broj zadataka po statusima'),
+        title: const ChartTitle(text: 'Broj zadataka po statusima'),
         legend: const Legend(isVisible: true),
         series: <CircularSeries>[
           RadialBarSeries<ChartData, String>(
@@ -334,13 +334,14 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget _buildBarChart(BuildContext context) {
     return Expanded(
       child: SfCartesianChart(
-          title: ChartTitle(
+          title: const ChartTitle(
             text: "Broj iskorištenih dana za događaje po zaposleniku",
           ),
-          primaryXAxis: CategoryAxis(),
-          primaryYAxis: NumericAxis(minimum: 0, maximum: 40, interval: 10),
+          primaryXAxis: const CategoryAxis(),
+          primaryYAxis:
+              const NumericAxis(minimum: 0, maximum: 40, interval: 10),
           tooltipBehavior: TooltipBehavior(enable: true),
-          series: <ChartSeries<ChartData, String>>[
+          series: <CartesianSeries<ChartData, String>>[
             BarSeries<ChartData, String>(
               dataSource: barChartData,
               xValueMapper: (ChartData data, _) => data.x,

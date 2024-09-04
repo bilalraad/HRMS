@@ -7,7 +7,7 @@ part of 'task_status.dart';
 // **************************************************************************
 
 TaskStatus _$TaskStatusFromJson(Map<String, dynamic> json) => TaskStatus(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
     );
 

@@ -10,7 +10,7 @@ MessageInsert _$MessageInsertFromJson(Map<String, dynamic> json) =>
     MessageInsert(
       json['text'] as String,
       json['room'] as String,
-      json['employeeId'] as int,
+      (json['employeeId'] as num).toInt(),
     );
 
 Map<String, dynamic> _$MessageInsertToJson(MessageInsert instance) =>

@@ -7,7 +7,7 @@ part of 'task_type.dart';
 // **************************************************************************
 
 TaskType _$TaskTypeFromJson(Map<String, dynamic> json) => TaskType(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
     );
 

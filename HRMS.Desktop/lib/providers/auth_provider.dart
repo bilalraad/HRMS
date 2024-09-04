@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -12,13 +13,13 @@ class AuthProvider with ChangeNotifier {
   AuthProvider() {
     _baseUrl = const String.fromEnvironment(
       "IdentityServerUrl",
-      defaultValue: "https://localhost:51443/",
+      defaultValue:
+          kDebugMode ? "https://10.0.2.2:51443/" : "https://localhost:51443/",
     );
   }
 
   Future<String> login(String email, String password) async {
     var uri = Uri.parse('${_baseUrl}login?email=$email&password=$password');
-
     var response = await http.get(uri);
 
     if (_isValidResponse(response)) {

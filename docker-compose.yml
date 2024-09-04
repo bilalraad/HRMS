@@ -1,12 +1,10 @@
-version: '3.9'
-
 services:
   hrms.sql:
     container_name: HRMS.SQL
     build:
       context: .
       dockerfile: HRMS.Database/Dockerfile
-    restart: unless-stopped
+    # restart: unless-stopped
     environment:
       - ACCEPT_EULA=Y
       - MSSQL_SA_PASSWORD=${SQL_PASSWORD}

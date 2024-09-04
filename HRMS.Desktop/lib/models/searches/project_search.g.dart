@@ -8,8 +8,8 @@ part of 'project_search.dart';
 
 ProjectSearch _$ProjectSearchFromJson(Map<String, dynamic> json) =>
     ProjectSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?;
 
 Map<String, dynamic> _$ProjectSearchToJson(ProjectSearch instance) =>

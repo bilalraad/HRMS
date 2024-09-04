@@ -7,8 +7,8 @@ part of 'city_search.dart';
 // **************************************************************************
 
 CitySearch _$CitySearchFromJson(Map<String, dynamic> json) => CitySearch()
-  ..page = json['page'] as int
-  ..pageSize = json['pageSize'] as int
+  ..page = (json['page'] as num).toInt()
+  ..pageSize = (json['pageSize'] as num).toInt()
   ..name = json['name'] as String?
   ..includeCountry = json['includeCountry'] as bool;
 

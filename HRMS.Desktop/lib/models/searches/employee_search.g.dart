@@ -8,8 +8,8 @@ part of 'employee_search.dart';
 
 EmployeeSearch _$EmployeeSearchFromJson(Map<String, dynamic> json) =>
     EmployeeSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?
       ..includeCity = json['includeCity'] as bool
       ..includeCountry = json['includeCountry'] as bool

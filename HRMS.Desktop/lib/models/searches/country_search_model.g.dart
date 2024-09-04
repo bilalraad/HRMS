@@ -8,8 +8,8 @@ part of 'country_search_model.dart';
 
 CountrySearch _$CountrySearchFromJson(Map<String, dynamic> json) =>
     CountrySearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?;
 
 Map<String, dynamic> _$CountrySearchToJson(CountrySearch instance) =>

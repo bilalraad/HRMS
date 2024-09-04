@@ -8,8 +8,8 @@ part of 'position_search.dart';
 
 PositionSearch _$PositionSearchFromJson(Map<String, dynamic> json) =>
     PositionSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?
       ..includeDepartment = json['includeDepartment'] as bool
       ..includePayGrade = json['includePayGrade'] as bool

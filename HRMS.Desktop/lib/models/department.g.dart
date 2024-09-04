@@ -7,13 +7,13 @@ part of 'department.dart';
 // **************************************************************************
 
 Department _$DepartmentFromJson(Map<String, dynamic> json) => Department(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       json['parentDepartment'] == null
           ? null
           : Department.fromJson(
               json['parentDepartment'] as Map<String, dynamic>),
-      json['level'] as int,
+      (json['level'] as num).toInt(),
       json['supervisor'] == null
           ? null
           : Employee.fromJson(json['supervisor'] as Map<String, dynamic>),

@@ -8,7 +8,7 @@ part of 'employee_position.dart';
 
 EmployeePosition _$EmployeePositionFromJson(Map<String, dynamic> json) =>
     EmployeePosition(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['employee'] == null
           ? null
           : Employee.fromJson(json['employee'] as Map<String, dynamic>),
@@ -20,7 +20,7 @@ EmployeePosition _$EmployeePositionFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['endDate'] as String),
       (json['salary'] as num).toDouble(),
-      json['vacationDays'] as int,
+      (json['vacationDays'] as num).toInt(),
       $enumDecode(_$EmploymentTypeEnumMap, json['type']),
       $enumDecode(_$EmploymentStatusEnumMap, json['status']),
       json['workingHours'] as String,

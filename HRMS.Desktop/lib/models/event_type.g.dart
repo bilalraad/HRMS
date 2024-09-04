@@ -7,7 +7,7 @@ part of 'event_type.dart';
 // **************************************************************************
 
 EventType _$EventTypeFromJson(Map<String, dynamic> json) => EventType(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       json['isApprovalRequired'] as bool,
       json['color'] as String,

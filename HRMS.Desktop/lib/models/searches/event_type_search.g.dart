@@ -8,8 +8,8 @@ part of 'event_type_search.dart';
 
 EventTypeSearch _$EventTypeSearchFromJson(Map<String, dynamic> json) =>
     EventTypeSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?;
 
 Map<String, dynamic> _$EventTypeSearchToJson(EventTypeSearch instance) =>

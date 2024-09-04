@@ -7,8 +7,8 @@ part of 'task_search.dart';
 // **************************************************************************
 
 TaskSearch _$TaskSearchFromJson(Map<String, dynamic> json) => TaskSearch()
-  ..page = json['page'] as int
-  ..pageSize = json['pageSize'] as int
+  ..page = (json['page'] as num).toInt()
+  ..pageSize = (json['pageSize'] as num).toInt()
   ..name = json['name'] as String?
   ..includeProject = json['includeProject'] as bool
   ..includeStatus = json['includeStatus'] as bool

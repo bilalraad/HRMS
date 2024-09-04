@@ -7,7 +7,7 @@ part of 'employee.dart';
 // **************************************************************************
 
 Employee _$EmployeeFromJson(Map<String, dynamic> json) => Employee(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['firstName'] as String,
       json['lastName'] as String,
       json['maidenName'] as String,
@@ -36,8 +36,8 @@ Employee _$EmployeeFromJson(Map<String, dynamic> json) => Employee(
       json['education'] == null
           ? null
           : Education.fromJson(json['education'] as Map<String, dynamic>),
-      json['previousLOSYears'] as int,
-      json['previousLOSMonths'] as int,
+      (json['previousLOSYears'] as num).toInt(),
+      (json['previousLOSMonths'] as num).toInt(),
       json['bankAccount'] as String,
       json['note'] as String,
       DateTime.parse(json['createDate'] as String),

@@ -8,8 +8,8 @@ part of 'message_search.dart';
 
 MessageSearch _$MessageSearchFromJson(Map<String, dynamic> json) =>
     MessageSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..room = json['room'] as String?
       ..includeEmployee = json['includeEmployee'] as bool;
 

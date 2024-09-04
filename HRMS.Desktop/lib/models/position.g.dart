@@ -7,7 +7,7 @@ part of 'position.dart';
 // **************************************************************************
 
 Position _$PositionFromJson(Map<String, dynamic> json) => Position(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       json['department'] == null
           ? null

@@ -9,8 +9,8 @@ part of 'employee_position_search.dart';
 EmployeePositionSearch _$EmployeePositionSearchFromJson(
         Map<String, dynamic> json) =>
     EmployeePositionSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?;
 
 Map<String, dynamic> _$EmployeePositionSearchToJson(

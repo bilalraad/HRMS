@@ -5,7 +5,7 @@
 # GitRepo: https://github.com/Microsoft/mssql-docker
 
 # Base OS layer: Latest Ubuntu LTS
-FROM ubuntu:16.04
+FROM --platform=linux/amd64 ubuntu:16.04
 
 # Install prerequistes since it is needed to get repo config for SQL server
 RUN export DEBIAN_FRONTEND=noninteractive && \

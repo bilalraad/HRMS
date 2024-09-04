@@ -7,7 +7,7 @@ part of 'pay_grade.dart';
 // **************************************************************************
 
 PayGrade _$PayGradeFromJson(Map<String, dynamic> json) => PayGrade(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['name'] as String,
       (json['minAmount'] as num).toDouble(),
       (json['maxAmount'] as num).toDouble(),

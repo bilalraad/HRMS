@@ -7,9 +7,9 @@ part of 'education.dart';
 // **************************************************************************
 
 Education _$EducationFromJson(Map<String, dynamic> json) => Education(
-      json['id'] as int,
+      (json['id'] as num).toInt(),
       json['isced'] as String,
-      json['eqf'] as int,
+      (json['eqf'] as num).toInt(),
       json['qualification'] as String,
       json['finishedEducation'] as String,
       json['qualificationOld'] as String,

@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:signalr_netcore/signalr_client.dart';
 
 import '../models/message.dart';
@@ -12,7 +13,8 @@ class ChatProvider extends BaseProvider<Message, MessageSearch> {
   ChatProvider() : super(altEndpoint: "chat") {
     _baseUrl = "${const String.fromEnvironment(
       "ApiUrl",
-      defaultValue: "https://localhost:50443/",
+      defaultValue:
+          kDebugMode ? "https://10.0.2.2:50443/" : "https://localhost:50443/",
     )}chatHub";
   }
 

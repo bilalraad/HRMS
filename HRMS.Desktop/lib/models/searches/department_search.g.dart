@@ -8,8 +8,8 @@ part of 'department_search.dart';
 
 DepartmentSearch _$DepartmentSearchFromJson(Map<String, dynamic> json) =>
     DepartmentSearch()
-      ..page = json['page'] as int
-      ..pageSize = json['pageSize'] as int
+      ..page = (json['page'] as num).toInt()
+      ..pageSize = (json['pageSize'] as num).toInt()
       ..name = json['name'] as String?
       ..includeParentDepartment = json['includeParentDepartment'] as bool
       ..includeSupervisor = json['includeSupervisor'] as bool;

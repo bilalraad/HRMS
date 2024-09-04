@@ -10,9 +10,9 @@ PositionInsertUpdate _$PositionInsertUpdateFromJson(
         Map<String, dynamic> json) =>
     PositionInsertUpdate(
       json['name'] as String,
-      json['departmentId'] as int?,
-      json['payGradeId'] as int?,
-      json['requiredEducationId'] as int?,
+      (json['departmentId'] as num?)?.toInt(),
+      (json['payGradeId'] as num?)?.toInt(),
+      (json['requiredEducationId'] as num?)?.toInt(),
       json['isWorkExperienceRequired'] as bool,
     );
 
